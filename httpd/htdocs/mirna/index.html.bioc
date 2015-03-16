@@ -1,0 +1,177 @@
+<html>
+	<head>
+		<title>
+			bioCompendium
+		</title>
+		<link rel="stylesheet" href="/style/biocompendium.css">
+		<script type="text/javascript" src="/javascript/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+		<script type="text/javascript" src="/javascript/tool_tip.js"></script>
+		<script type="text/javascript" src="/javascript/dynamic_file_upload.js"></script>
+		<script type="text/javascript" src="/javascript/id_type.js"></script>	
+		<script type="text/javascript" src="/javascript/prototype.js"></script>
+		<script type="text/javascript" src="/javascript/effects.js"></script>
+		<script type="text/javascript" src="/javascript/dragdrop.js"></script>
+		<script type="text/javascript" src="/javascript/controls.js"></script>
+	</head>
+	<body onload="fillCategory(1);">
+	<form method="POST" action="/cgi-bin/biocompendium.cgi" enctype="multipart/form-data" name="biocompendium">
+		<table  cellspacing="0" cellpadding="0" border="0" width="100%">
+			<tr>
+<!--
+                                <td bgcolor=#000049 width=12>&nbsp;</td>
+-->
+				<td  bgcolor= #000049>
+					<table  cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td  rowspan=2><img title="bioCompendium" alt="bioCompendium" src="/images/icon.png" width="70" height="70"></td>
+<!--
+							<td  rowspan=2><img title="bioCompendium" alt="bioCompendium" src="/images/bioinformatics.jpg" width="70" height="70"></td>
+							<td><p class="title">&nbsp;bioCompendium&nbsp;</p></td>  
+-->
+							<td class="banner_title">&nbsp;bioCompendium&nbsp;</td>  
+						</tr>
+						<tr>
+							<!--
+							<td class="banner_subtitle">&nbsp;&nbsp;The compendium of biological knowledge</td>
+							-->
+							<td class="banner_subtitle">&nbsp;&nbsp;The high-throughput experimental data analysis platform</td>
+						</tr>
+					</table>
+				</td>
+				<td></td>
+			</tr>
+<!--
+                        <tr>
+                                <td bgcolor="#FFFFFF" width="12"><br><br></td>
+                        </tr>
+-->
+
+                        <tr>
+<!--
+                                <td bgcolor="lightgrey" width="12"></td>
+-->
+                                <td><table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="lightgrey">
+                                        <tr>
+<!--
+						<td  class="text">| <a href="http://elephant.embl.de" class="deco">home</a> | examples | help |</td>
+-->
+						<td>
+							<div class="tabBox" style="clear:both;">
+								<div class="tabArea">
+									<a class="activetab" href="/">home</a>
+									<a class="tab" href="/examples">examples</a>
+									<a class="tab" href="/help">help</a>
+								</div>
+							</div>
+						</td>
+
+                                                <td align="right">
+                                                        <table>
+                                                                <tr>
+									<div><td><input name="search" id="search" maxlength="40" alt="Search" type="text" size="40" value="search..."  onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';" /><span id="indicator1" style="display: none"></span></div>
+									<div id="search_update" style="display:none; border:1px solid black;background-color:white;"></div>
+<script type="text/javascript" language="javascript" charset="utf-8">
+    // <![CDATA[
+      new Ajax.Autocompleter('search','search_update','/cgi-bin/biocompendium_auto_select.cgi',{method:'get', minChars:1, frequency:0.1, indicator:'indicator1'}); <!-- , indicator:'indicator1' -->
+    // ]]>
+</script>
+
+</td>
+									<td><input type="hidden" name="search"   value="search" /></td>
+                                                                </tr>
+                                                        </table>
+                                                </td>
+                                        </tr>
+                                </table>
+                                </td>
+                                <td></td>
+                        </tr>
+			<tr>
+				<td></td>
+				<td><br></td>
+				<td></td>
+			</tr>
+		</table>	
+
+<td class="framedata" valign="top">
+<table cellpadding="0" width="100%" cellspacing="0" border="0" class="column">
+<tr><td class="columndata">
+
+<!-- Cell START -->
+<table cellpadding="0" width="60%" cellspacing="0" border="0" class="cell" align="left">
+
+<tr><td align=left class="cellbanner">
+Gene list(s) analysis
+</td></tr>
+
+<tr><td class="cellbody">
+<br>
+	<small class="text_justify"><b>Select primary organism :</b></small>
+	<small class="text_justify">
+
+				<select name="primary_org" id="primary_org">
+					<option value="human">human</option>
+					<option value="mouse">mouse</option>
+  					<option value="yeast">yeast</option>
+				</select>
+	</small><br><br>
+
+	<small class="text_justify"><b>Select background :</b></small>
+	<small class="text_justify"><input type='radio' id="background" name="background" value="whole_genome" checked/>whole genome<input type='radio' id="backgroud" name="background" value="other_gene_lists"/>other gene list(s)</small><br><br>
+
+	<small class="text_justify"><b>Upload gene list(s) and/or documents :</b></small><br><br>
+	<small class="text_justify"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Org&nbsp;&nbsp;&nbsp;</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Name</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>File</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>ID/Document Type</i><br>
+	<SELECT  id="Category1" NAME="Category1" onChange="SelectSubCatAll(this.id);"></SELECT><input type="text" size="8" id="gene_list_1" name="gene_list_1" value="gene_list_1"><input type="file" name="attachment1" id="attachment1" onchange="document.getElementById('moreUploadsLink').style.display = 'block';" /><SELECT id="SubCat1" NAME="SubCat1"></SELECT>
+
+	<div id="moreUploads"></div>
+	<div id="moreUploadsLink" style="display:none;"><a href="javascript:addFileInput();">Upload another list</a></div>
+	<br><br>
+	<input type='reset' value='Reset'/></a>
+	<input type='submit' value='GO !'/>
+</td></tr>
+
+</table>
+<!-- Cell END -->
+
+<!-- Cell START -->
+<table cellpadding="0" width="40%" cellspacing="0" border="0" class="cell" align="right">
+
+<tr><td align=left class="cellbanner">
+What is it & what it does ....
+</td></tr><tr><td class="cellbody">
+
+<p class="text_justify"><b>bioCompendium</b> is a publicly accessible, high-throughput experimental data analysis platform. The system is designed to work with large lists of genes or proteins for which it collects a wide spectrum of biological information. It facilitates the analysis, comparison and enrichment of experimental results; either proprietary or publicly available data sets. Typical use cases are the prioritization of potential targets from gene expression analysis studies or from RNAi studies. The current version is designed to work best for human, mouse and yeast but other model organisms will be included in the next releases. <br><br>
+
+Main features of the system are: 
+<ul>	
+	<li>Input and conversion of a wide range of input ID's like UniProt, GO, Affymetrix and RefSeq</li>
+	<li>Extraction of bio-entities from different file formats (MS-Office, PDF and flat text)</li>
+	<li>Comprehensive knowledge collection from different biological database for a given list(s) of genes</li>
+	<li>Search interface to the knowledge collection to find information like gene annotations, disease associations, sequences domain architectures, interfering chemicals and involved pathways</li>
+	<li>Enrichment analysis for GeneOntology terms, diseases, pathways and other biological concepts</li>
+	<li>Extraction of the protein-protein, protein-chemistry interactions networks</li>
+	<li>Compilation of clusters based on sequence homology & sequence domain architectures in a given list(s) of genes</li>
+	<li>Analysis and clustering of transcription factor binding site (TFBS) profiles</li>
+	<li>Access to orthology information, clinical trial and patent information</li>
+	<li>Comparison of results derived from different experimental conditions, time series or treatments</li>
+</ul>
+	<p class="text_justify">See <a href="/help">help pages</a> for more detais.
+</td></tr>
+<tr><td><p class="text_justify2">Send comments to <a class=gpdb href="mailto:venkata.satagopam@embl.de?subject=bioCompendium enquiry/comment">Venkata P. Satagopam</a></td></tr>
+</table>
+<!-- Cell END -->
+
+<!-- Google analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10962512-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+        </body>
+</html>
+
+

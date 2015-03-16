@@ -1,0 +1,56 @@
+<!-- 
+    Document   : index.html
+    Created on : May 09, 2010 
+    Author     : Venkata P. Satagopam (venkata.satagopam@embl.de), Schneider group
+-->
+<html>
+    <head>
+        <title>sysTec: Functional analysis of non-coding RNAs in living cells</title>
+<link rel="stylesheet" href="/sysTec/style/systec.css">
+                <script type="text/javascript" src="/sysTec/javascript/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+                <script type="text/javascript" src="/sysTec/javascript/tool_tip.js"></script>
+                <script type="text/javascript" src="/sysTec/javascript/dynamic_file_upload.js"></script>
+                <script type="text/javascript" src="/sysTec/javascript/id_type.js"></script>   
+                <script type="text/javascript" src="/sysTec/javascript/prototype.js"></script>
+                <script type="text/javascript" src="/sysTec/javascript/effects.js"></script>
+                <script type="text/javascript" src="/sysTec/javascript/dragdrop.js"></script>
+                <script type="text/javascript" src="/sysTec/javascript/controls.js"></script>
+    </head>
+    <body>
+	<form ENCTYPE="multipart/form-data" ACTION="/cgi-bin/biocompendium.cgi" METHOD="POST">	
+		<table><tr><td>&nbsp;&nbsp;</td><td>
+	                <table  cellspacing="0" cellpadding="0" border="0" width="900">
+                        <tr>
+                                <td  bgcolor= #336633>
+                                        <table  cellspacing="0" cellpadding="0" border="0">
+                                                <tr>
+                                                        <td  rowspan=2><img title="sysTec" alt="sysTec" src="/sysTec/images/sysTec_logo.jpg" width="70" height="70"></td>
+                                                        <td class="banner_title">&nbsp;sysTec&nbsp;</td>  
+						</tr>
+						<tr>
+							 <td class="banner_subtitle">&nbsp;Functional analysis of non-coding RNAs in living cells&nbsp;</td>	
+                                                </tr>
+                                        </table>
+                                </td>
+                                <td></td>
+                        </tr>	
+                        <tr>
+                                <td></td>
+                                <td></td>
+			</tr>
+                        <tr>
+                                <td></td>
+                                <td></td>
+			</tr>
+
+                        <tr>
+                                <td></td>
+                                <td></td>
+			</tr>
+
+		</table>	
+		</td></tr></table>			
+        </form>
+    </body>
+</html>
+

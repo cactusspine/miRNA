@@ -1,0 +1,213 @@
+html{
+        overflow-x:scroll;
+        overflow-y:scroll;  
+        font-family: calibri;
+
+}
+
+p{    
+        text-align:justify;
+        font-family: calibri;
+}
+
+a{
+        text-align: middle;
+        font-family: calibri;
+}
+
+A:link {text-decoration: none; color:royalblue}
+A:visited {text-decoration: none; color:royalblue;}
+A:active {text-decoration: none; color:royalblue;}
+A:hover#over {text-decoration: underline; color: red;}
+
+img
+{
+        vertical-align:middle;
+        border-width:0px;
+        
+} 
+
+p,table{
+        font-family:calibri;
+        border-collapse:collapse;
+        margin-left: 0px;
+        
+}
+
+#customers td, #customers th
+{
+        font-family: calibri;
+        font-size:15px;
+        border:1px solid #7BB0E4;
+        padding:3px 7px 2px 7px;
+
+}
+#customers th
+{
+        font-size:15px;
+        font-family: calibri;
+        text-align:left;
+        padding-top:5px;
+        padding-bottom:4px;
+        
+        background-color:#3385FF;
+        color:#ffffff;
+}
+#customers tr.alt td
+{
+        color:#000000;
+        background-color:#EAF2D3;
+        font-family: calibri;
+}
+
+
+
+th
+{
+        background-color: grey;
+        color: white;
+        text-align: center;
+        vertical-align: bottom;
+        height: 268px;
+        padding-bottom: 3px;
+        padding-left: 3px;
+        padding-right: 3px;
+        font-family: calibri;        
+}
+
+.verticalText
+{
+        font-family: calibri;
+        font-weight: normal;
+        font-size: 15px;
+        text-align: center;
+        vertical-align: middle;
+        width: 10px;
+        margin: 0px;
+        padding: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        white-space: nowrap;
+        -webkit-transform: rotate(-90deg); 
+        -moz-transform: rotate(-90deg);  				
+}
+
+h3{
+        color:steelblue;
+        font-family: calibri;
+        
+}
+
+div.linkbar {
+        font-family:calibri;
+	width: 1024px;
+        height: 30px;
+	border: 0px;
+	background-color: #E0E0E0;
+	padding: 0px;
+        alignment-adjust: "right";
+        text-align-last: "right";
+        z-index:+1;
+        position: fixed;
+        margin-top: 5px;
+        margin-left: 0px;
+        
+
+}
+div.banner{
+        font-family: calibri;
+ 	width: 1024px;
+        height: 90px;
+	border: 0px;
+	background-color: white;
+	padding: 0px;
+        alignment-adjust: "right";
+        text-align-last: "right";
+        z-index:+1;
+        position: fixed;
+        margin-top: 35px;
+        margin-left: 0px;
+        
+}
+div.header{
+        font-family: calibri;
+   	width: 100%;
+        height: 125px;
+	border: 6px solid white;
+        z-index:+1;
+        position: fixed;
+        margin-top:-18px;
+        background-color: white;
+        margin-left: -12px;
+        margin-right: -12px;
+
+}
+div.main {
+        font-family: calibri;
+ 	width: 1020px;
+        height: 100%;
+        overflow: auto;
+        margin-top: 30px;
+        margin-left: -10px;
+        border: 4px solid white;
+}
+
+div.small{    
+        font-family: calibri;
+        width: 1020px;
+        text-align: justify;
+	border: 0px solid black;
+}
+
+div.ResultTable{    
+        font-family: calibri;
+        width: 1020px;
+        text-align: justify;
+	border: 2px solid black;
+        overflow: auto;
+        overflow-x:scroll;
+        overflow-y:scroll;  
+}
+
+th.stats{
+        font-family: calibri;
+        background-color: "#3385FF";
+        color: white;
+        text-align: center;
+        vertical-align: bottom;
+        height: 20px;
+        padding-bottom: 3px;
+        padding-left: 3px;
+        padding-right: 3px;
+}
+
+
+div.tabela{    
+        font-family: calibri;
+        width: 1020px;
+        text-align: justify;
+	border: 1px solid black;
+}
+
+
+
+
+.wmd-view-topscroll, .wmd-view {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 300px;
+    border: none 0px RED;
+}
+
+.wmd-view-topscroll { height: 20px; }
+.wmd-view { height: 200px; }
+.scroll-div1 { 
+    width: 1000px; 
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.scroll-div2 { 
+    width: 1000px; 
+    height:20px;
+}
